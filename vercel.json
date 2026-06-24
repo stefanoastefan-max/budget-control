@@ -1,0 +1,30 @@
+{
+  "name": "budget-control",
+  "version": 2,
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": {
+      "description": "Your Supabase project URL (from Settings > API)"
+    },
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": {
+      "description": "Your Supabase anon key (from Settings > API)"
+    },
+    "SUPABASE_SERVICE_ROLE_KEY": {
+      "description": "Your Supabase service role key (from Settings > API) - KEEP SECRET"
+    },
+    "NEXTAUTH_SECRET": {
+      "description": "Random secret for NextAuth - generate any random string"
+    },
+    "NEXTAUTH_URL": {
+      "description": "Your Vercel deployment URL - Vercel sets this automatically"
+    }
+  },
+  "regions": ["sfo1"],
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
+}
